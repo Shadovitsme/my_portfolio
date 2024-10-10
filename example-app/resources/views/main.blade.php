@@ -4,15 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Главная</title>
-    <!-- Стили -->
-    <link rel="stylesheet" href="css/main.css">
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @include('snippets.fonts')
 </head>
 
 <body>
-    <?php include_once('../resources/views/components/header.php') ?>
-
-    <?php include_once('../resources/views/components/content/main.php') ?>
-
+    <x-header>$head</x-header>
+    <x-contacts>$contacts</x-contacts>
 </body>
 
 </html>

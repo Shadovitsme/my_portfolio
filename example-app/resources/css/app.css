@@ -1,0 +1,21 @@
+.head {
+    display: inline;
+    font-size: x-large;
+}
+header {
+    margin-top: 2%;
+    text-align: center;
+}
+
+.contacts {
+    text-align: left;
+    position: sticky;
+    bottom: 0;
+}
+
+html {
+    font-family: "Neucha", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
