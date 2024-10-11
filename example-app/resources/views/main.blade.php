@@ -8,8 +8,9 @@
     @include('snippets.fonts')
 </head>
 
+<x-header>$head</x-header>
+
 <body>
-    <x-header>$head</x-header>
     <x-contacts>$contacts</x-contacts>
 </body>
 

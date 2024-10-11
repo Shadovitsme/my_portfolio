@@ -1,21 +1,61 @@
-.head {
-    display: inline;
-    font-size: x-large;
-}
-header {
-    margin-top: 2%;
-    text-align: center;
+body {
+    margin: 0;
+    /* min-height: 10000px; */
 }
 
+.head {
+    display: inline-block;
+    margin-inline: 3%;
+    font-size: x-large;
+    color: black;
+    color: inherit;
+    transition: 1s;
+}
+
+.head a {
+    color: black;
+    color: inherit;
+}
+    
+.head:hover {
+    transform: scale(1.2)
+}
+
+header {
+    text-align: center;
+    position:fixed;
+    z-index: 100;
+    width: 100%;
+}
+
+.contacts-pos {
+    position: fixed;
+    bottom: 0;
+    margin: 2%;
+}
 .contacts {
     text-align: left;
-    position: sticky;
-    bottom: 0;
+}
+
+.telegram-icon:hover {
+    filter: invert(45%) sepia(92%) saturate(545%) hue-rotate(150deg) brightness(94%) contrast(106%);
+}
+
+.phone-icon:hover {
+    filter: invert(37%) sepia(95%) saturate(3607%) hue-rotate(136deg) brightness(101%) contrast(101%);
+}
+
+.github-icon {
+    opacity: 50%;
+}
+
+.github-icon:hover {
+    opacity: 100%;
 }
 
 html {
     font-family: "Neucha", cursive;
     font-weight: 400;
     font-style: normal;
-  }
+}
   
