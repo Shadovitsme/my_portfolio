@@ -9,8 +9,9 @@
             width="50px">
     </div>
     <div class='contacts'>
-        <img class="github-icon" src="images/GitHub.svg"
-            width="50px">
-
+        <a href="https://github.com/Shadovitsme">
+            <img class="github-icon" src="images/GitHub.svg"
+                width="50px">
+        </a>
     </div>
 </div>

@@ -6,10 +6,14 @@ Route::get('/', function () {
     return view('main');
 });
 
-Route::get('/news', function () {
-    return view('news');
-});
-
 Route::get('/about', function () {
     return view('about');
+});
+
+Route::get('/portfolio', function () {
+    return view('portfolio');
+});
+
+Route::get('/skills', function () {
+    return view('skills');
 });
