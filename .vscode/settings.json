@@ -6,6 +6,20 @@
       "driver": "SQLite",
       "name": "mydb",
       "database": "${workspaceFolder:result_accent}/example-app/database/database.sqlite"
+    },
+    {
+      "mysqlOptions": {
+        "authProtocol": "default",
+        "enableSsl": "Disabled"
+      },
+      "previewLimit": 50,
+      "server": "127.0.0.1",
+      "port": 3306,
+      "driver": "MySQL",
+      "name": "mysql",
+      "database": "laravel",
+      "username": "sail",
+      "password": "password"
     }
   ]
 }
