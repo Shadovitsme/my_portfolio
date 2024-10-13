@@ -8,10 +8,29 @@
     @include('snippets.fonts')
 </head>
 
-<x-header>$head</x-header>
-
 <body>
+    <x-header>$head</x-header>
     <x-contacts>$contacts</x-contacts>
+
+    <div class="hi-text">
+        <div class="textcols">
+            <div class="textcols-item">
+                <img class="main-page-image" src="images/plaseholder.webp">
+                <img class="main-page-image" src="images/plaseholder.webp">
+                <img class="main-page-image" src="images/plaseholder.webp">
+                <img class="main-page-image" src="images/plaseholder.webp">
+
+            </div>
+            <div class="textcols-item">
+                <div>Это мои рисунки</div>
+                <div>Это мои питомцы</div>
+                <div>Это мои растения</div>
+                <div>Это моя вышивка</div>
+            </div>
+
+        </div>
+    </div>
+
 </body>
 
 </html>
