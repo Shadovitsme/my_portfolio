@@ -17,3 +17,6 @@ Route::get('/portfolio', function () {
 Route::get('/skills', function () {
     return view('skills');
 });
+Route::get('/admin', function () {
+    return view('adminPage');
+});

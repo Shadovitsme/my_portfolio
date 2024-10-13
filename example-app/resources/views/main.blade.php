@@ -26,7 +26,6 @@
             </div>
         </div>
     </div>
-    <x-test>$test</x-test>
 </body>
 
 </html>

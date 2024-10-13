@@ -9,10 +9,8 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\View\View;
 use Illuminate\Database\Eloquent\Model;
 
-DB::insert('insert into MY_DRAFTS (DRAFTS) values (?)', ['1010110']);
-
-$users = DB::select('select * from MY_DRAFTS');
+$users = DB::select('select * from skills');
 
 foreach ($users as $user) {
-    echo $user->DRAFTS . '<br />';
+    echo $user->name . '<br />';
 }
