@@ -11,4 +11,4 @@ use Illuminate\Support\Facades\DB;
 
 foreach (skills::all() as $flight) {
     echo $flight->name . ' ';
-}
+} 

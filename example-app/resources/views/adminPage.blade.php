@@ -11,7 +11,7 @@
 <body>
     <div>
         <!-- TODO сделать проверку на корректное заполнение -->
-        <form name="form" action="" method="post">
+        <form name="form" class="class='js--ajax-test" method="get">
             <input type="text" id="name" name="name" value="skill" maxlength="20" size="10" />
             <select name="pets" id="level-select">
                 <option value="">--Please choose an level--</option>
@@ -22,10 +22,8 @@
                 <option class="five" value="5">5</option>
             </select>
             <input type="text" id="name" name="name" value="where used" maxlength="100" size="10" />
-            <button>add skill</button>
+            <button class="js--ajax-test">add skill</button>
         </form>
-
-        <button class='js--ajax-test'>AJAX</button>
 
         <?php
 
@@ -64,7 +62,7 @@
         <tr>
             <td>данные</td>
             <td>данные</td>
-        </tr> <!--ряд с ячейками тела таблицы-->
+        </tr> <!--ряд с  ячейками тела таблицы-->
     </table>
 </body>
 

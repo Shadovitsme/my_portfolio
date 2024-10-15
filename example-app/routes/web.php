@@ -23,12 +23,6 @@ Route::get('/admin', function () {
     return view('adminPage');
 });
 
-// Route::get('/api', function () {
-
-//     return $_GET;
-// });
-
 Route::controller(MainDataBaseAction::class)->group(function () {
     Route::get('/api', 'addSkill');
-    // Route::post('/orders', 'store');
 });

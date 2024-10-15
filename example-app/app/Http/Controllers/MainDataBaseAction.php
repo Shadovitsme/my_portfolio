@@ -17,7 +17,7 @@ class MainDataBaseAction extends Controller
             ['name' => $_GET['skill'], 'level_id' => $_GET['level']],
         ]);
         //TODO добавить поиск соответствия в бд проектов чтобы возварщать нужный айди.
-        foreach (skills::all() as $flight) {
+        foreach (skills::all() as $flight) { 
             echo $flight->name . ' ';
         }
     }
