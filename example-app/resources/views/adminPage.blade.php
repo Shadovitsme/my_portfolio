@@ -3,22 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>admin</title>
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @include('snippets.fonts')
 </head>
 
 <body>
     <div>
-        <input type="text" id="name" name="name" value="skill" maxlength="20" size="10" />
-        <select name="pets" id="pet-select">
-            <option value="">--Please choose an level--</option>
-            <option value="dog">1</option>
-            <option value="cat">2</option>
-            <option value="hamster">3</option>
-            <option value="parrot">4</option>
-            <option value="parrot">5</option>
-        </select>
-        <input type="text" id="name" name="name" value="where used" maxlength="100" size="10" />
-        <button>add skill</button>
+        <!-- TODO сделать проверку на корректное заполнение -->
+        <form name="form" action="" method="post">
+            <input type="text" id="name" name="name" value="skill" maxlength="20" size="10" />
+            <select name="pets" id="level-select">
+                <option value="">--Please choose an level--</option>
+                <option class="one" value="1">1</option>
+                <option class="two" value="2">2</option>
+                <option class="tre" value="3">3</option>
+                <option class="four" value="4">4</option>
+                <option class="five" value="5">5</option>
+            </select>
+            <input type="text" id="name" name="name" value="where used" maxlength="100" size="10" />
+            <button>add skill</button>
+        </form>
+
+        <button class='js--ajax-test'>AJAX</button>
+
+        <?php
+
+        use Illuminate\Http\RedirectResponse;
+        use Illuminate\Http\Request;
+
+        $request = new Request;
+        $name = $request->input('post'); ?>
     </div>
     <div>
         <!-- TODO сделать тут добавление файлов для иконок -->
@@ -29,7 +44,6 @@
         <span><input type="checkbox">commercial</span>
         <button>add project</button>
     </div>
-    <!-- TODO сделать отдельный подключаемый модуль для добавления фоточек в бд фоточек(мои питомцы и иже с ним) -->
     <div>
         <input type="file">
         <select name="galleries" id="pet-select">
@@ -39,8 +53,19 @@
             <option value="hamster">stitches</option>
             <option value="parrot">drafts</option>
         </select>
-
+        <x-test>$test</x-test>
     </div>
+    <!-- TODO сделать тут табличку для редактирования уже имеющихся записей -->
+    <table>
+        <tr>
+            <th>текст заголовка</th>
+            <th>текст заголовка</th>
+        </tr> <!--ряд с ячейками заголовков-->
+        <tr>
+            <td>данные</td>
+            <td>данные</td>
+        </tr> <!--ряд с ячейками тела таблицы-->
+    </table>
 </body>
 
 </html>

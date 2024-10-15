@@ -28,7 +28,7 @@
     </table>
 
     <div class="ajaxMenuBeckground">
-        <script type="text/javascript">
+        <!-- <script type="text/javascript">
             function focusMe(button) {
                 var elem = document.getElementsByClassName("button-selected")[0];
                 console.log(elem);
@@ -41,13 +41,13 @@
 
                 }
             }
-        </script>
+        </script> -->
 
         <div class="ajaxBlocks">
             <span>Собери свой стек!</span>
         </div>
         <div class='button-block'>
-            <button class="button-not-selected" onClick="focusMe(this);">Придумать как делать <br /> эти кнопки из бд</button>
+            <button class="button-not-selected js--button">Придумать как делать <br /> эти кнопки из бд</button>
             <!-- TODO придумать как генерировать кнопки по данным из бд -->
         </div>
         <div class="ajaxBlocks">
