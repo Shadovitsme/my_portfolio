@@ -22,18 +22,18 @@ $('.js--ajax-test').on('click', () => {
 });
 
 //чтобы кнопки меняли цвет при нажатии
-var clicked = false;
 $(document).on('click', 'button', function() {
-    if (clicked && ($(this).attr('class') == 'button-selected' || $(this).attr('class') == 'button-not-selected')) {
+    if ($(this).attr('value') == 1 && ($(this).attr('class') == 'button-selected' || $(this).attr('class') == 'button-not-selected')) {
         $(this).removeClass('button-selected');
          $(this).toggleClass("button-not-selected");
-        // $(this).attr("class")= "button-not-selected js--button";
+        $(this).removeAttr('value');
+        $(this).attr('value', '0');
     } else {
         $(this).removeClass('button-not-selected');
         $(this).toggleClass("button-selected");
         // $(this).attr("class")=  "button-selected js--button";
+        $(this).removeAttr('value');
+        $(this).attr('value', '1');
 
     }
-    clicked = !clicked;
-    console.log('Кнопка была нажата.');
 });

@@ -32,7 +32,7 @@
             <span>Собери свой стек!</span>
         </div>
         <div class='button-block'>
-            <button class="button-not-selected">Придумать как делать <br /> эти кнопки из бд</button>
+            <button value='0' class="button-not-selected">Придумать как делать <br /> эти кнопки из бд</button>
             <!-- TODO придумать как генерировать кнопки по данным из бд -->
         </div>
         <div class="ajaxBlocks">
@@ -40,11 +40,11 @@
             <span>Есть опыт коммерческой разработки</span>
         </div>
         <div class="button-block">
-            <button class="button-not-selected" id="one">1</button>
-            <button class="button-not-selected" id="two">2</button>
-            <button class="button-not-selected" id="tre">3</button>
-            <button class="button-not-selected" id="four">4</button>
-            <button class="button-not-selected" id="five">5</button>
+            <button value='0' class="button-not-selected" id="one">1</button>
+            <button value='0' class="button-not-selected" id="two">2</button>
+            <button value='0' class="button-not-selected" id="tre">3</button>
+            <button value='0' class="button-not-selected" id="four">4</button>
+            <button value='0' class="button-not-selected" id="five">5</button>
         </div>
 
     </div>
