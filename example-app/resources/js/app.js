@@ -22,17 +22,18 @@ $('.js--ajax-test').on('click', () => {
 });
 
 //чтобы кнопки меняли цвет при нажатии
-document.addEventListener("DOMContentLoaded", () => {
-    var button = document.getElementsByClassName('js--button')[0];
-    var clicked = false;
-    button.addEventListener('click', () => {
-    if (clicked) {
-        button.className = "button-not-selected js--button";
+$(document).on('click', 'button', function() {
+    if ($(this).attr('value') == 1 && ($(this).attr('class') == 'button-selected' || $(this).attr('class') == 'button-not-selected')) {
+        $(this).removeClass('button-selected');
+         $(this).toggleClass("button-not-selected");
+        $(this).removeAttr('value');
+        $(this).attr('value', '0');
     } else {
-        button.className = "button-selected js--button";
+        $(this).removeClass('button-not-selected');
+        $(this).toggleClass("button-selected");
+        // $(this).attr("class")=  "button-selected js--button";
+        $(this).removeAttr('value');
+        $(this).attr('value', '1');
 
     }
-    clicked = !clicked;
-    }
-    )
 });
