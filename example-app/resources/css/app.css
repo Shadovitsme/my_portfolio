@@ -2,7 +2,6 @@
 body {
     margin: 0;
 }
-/* TODO оформить выбор языка из шапки */
 
 .padding {
     padding: 50px
@@ -13,7 +12,7 @@ html {
     font-weight: 400;
     font-style: normal;
 }
-
+/* TODO рефакторнуть это чтобы читать стало проще */
 /* заголовок */
 .head {
     display: inline-block;
@@ -24,6 +23,13 @@ html {
     transition: 1s;
 }
 
+#lang{
+    border: 0;
+    background-color: transparent;
+}
+#lang:focus{
+   outline: 0;
+}
 .head a {
     color: black;
     color: inherit;
@@ -114,10 +120,11 @@ hr {
     border:2px solid rgb(231, 188, 224);
     border-radius: 10px;
     width: 20%;
-    height: 70%;
-    float: right;
+    position: fixed;
+    right: 0%;
     padding: 1.5%;
-    margin-right: 2%;
+    margin-right: 20px;
+    margin-bottom: 20px;
 }
 
 .button-not-selected{
@@ -136,6 +143,48 @@ hr {
     margin: 5px;
 }
 
+.map_legend{
+    text-align: center;
+    padding: 0 0 2% 0;
+}
+.map_legend_table{
+margin: auto;
+}
+.big-table{
+    width: 72%;
+    position: fixed;
+    left: 0%;
+    text-align: center;
+    padding-left: 50px;
+}
+
+.skillTable{
+    vertical-align: middle;
+    font-size: large;
+    border: 1px solid grey;
+    border-collapse: collapse;
+    width: 100%;
+}
+.skillTable tr{
+    vertical-align: middle;
+    font-size: large;
+    border: 1px solid grey;
+    border-collapse: collapse;
+}
+.skillTable tr td{
+    overflow-wrap: break-word; word-break: break-word;
+    vertical-align: middle;
+    font-size: large;
+    border: 1px solid grey;
+    border-collapse: collapse;
+    padding: 5px;
+}
+.first_column{
+    width: 10%;
+}
+.second_column{
+    width: 45%;
+}
 .ajaxBlocks{
     padding: 0 0 2% 0;
 }
@@ -143,22 +192,75 @@ hr {
 .button-block {
     padding: 2% 0% 5% 0
 }
-.five{
+#five{
     color: rgb(2, 211, 20);
 }
 
-.four{
+#four{
     color: #60d103;
 }
 
-.tre{
+#tre{
     color: orange;
 }
 
-.two{
+#two{
     color: #d17e46;
 }
 
-.one{
+#one{
     color: red;
+} 
+
+/* portfolio */
+.big-table-portfolio{
+    position: fixed;
+    text-align: center;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.PortfolioTable{
+    vertical-align: middle;
+    font-size: large;
+    border: 1px solid grey;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.PortfolioTable tr{
+    vertical-align: middle;
+    font-size: large;
+    border: 1px solid grey;
+}
+
+.PortfolioTable th{
+    vertical-align: middle;
+    padding-top: 5px;
+    font-size: large;
+}
+.PortfolioTable tr td{
+    overflow-wrap: break-word; word-break: break-word;
+    vertical-align: middle;
+    font-size: large;
+    padding: 5px;
+    text-align: center;
+    border: 1px solid grey;
+    
+}
+.first_column_port{
+    width: 5%;
+}
+.second_column_port{
+    width: 40%;
+}
+.third_column_port{
+    width: 40%
+}
+.four_column_port{
+width: 15%;
+}
+
+.portfolioIcon{
+    width: 50px;
+    height: 50px;
 }
