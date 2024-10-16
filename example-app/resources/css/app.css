@@ -211,3 +211,56 @@ margin: auto;
 #one{
     color: red;
 } 
+
+/* portfolio */
+.big-table-portfolio{
+    position: fixed;
+    text-align: center;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.PortfolioTable{
+    vertical-align: middle;
+    font-size: large;
+    border: 1px solid grey;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.PortfolioTable tr{
+    vertical-align: middle;
+    font-size: large;
+    border: 1px solid grey;
+}
+
+.PortfolioTable th{
+    vertical-align: middle;
+    padding-top: 5px;
+    font-size: large;
+}
+.PortfolioTable tr td{
+    overflow-wrap: break-word; word-break: break-word;
+    vertical-align: middle;
+    font-size: large;
+    padding: 5px;
+    text-align: center;
+    border: 1px solid grey;
+    
+}
+.first_column_port{
+    width: 5%;
+}
+.second_column_port{
+    width: 40%;
+}
+.third_column_port{
+    width: 40%
+}
+.four_column_port{
+width: 15%;
+}
+
+.portfolioIcon{
+    width: 50px;
+    height: 50px;
+}
