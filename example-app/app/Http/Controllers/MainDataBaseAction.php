@@ -15,7 +15,6 @@ class MainDataBaseAction extends Controller
         $id_proj = DB::table('projects')->where('name', '=', $project_value)->get('id');
         DB::table('skills')->insert([['name' => $_GET['skill'], 'level_id' => $_GET['level'], 'where_used_id' => $id_proj[0]->id],
         ]);
-        //TODO добавить поиск соответствия в бд проектов чтобы возварщать нужный айди.
         foreach (skills::all() as $flight) { 
             echo $flight->name . ' ';
         }

@@ -12,8 +12,8 @@
 <body>
     <x-test>$test</x-test>
     <div>
-        <!-- TODO сделать проверку на корректное заполнение -->
         <form name="form" class="class='js--ajax-test" method="get">
+            <!-- TODO добавить множественный выбор проектов -->
             <input type="text" class="skills_name" id="name" name="name" placeholder="skill" maxlength="20" size="10" />
 
             <select class="skills_level_selector" name="skills_leve;" id="level-select">
@@ -44,14 +44,21 @@
 
     </div>
     <div>
-        <!-- TODO сделать тут добавление файлов для иконок -->
-        <input type="file" id="name" name="name" placeholder="icon" maxlength="20" size="10" />
-        <input type="text" id="name" name="name" placeholder="name" maxlength="1" size="10" />
-        <input type="text" id="name" name="name" placeholder="link to demo" maxlength="100" size="10" />
-        <input type="text" id="name" name="name" placeholder="link to code" maxlength="100" size="10" />
-        <span><input type="checkbox">commercial</span>
-        <button>add project</button>
+        <a>projects</a>
+        <form class="ajaxForAddingProjects">
+            <!-- TODO сделать тут добавление файлов для иконок (перевод иконок в бинарники и обратно) -->
+            <input type="file" class="icon" name="name" placeholder="icon" maxlength="20" size="10" />
+            <input type="text" class="projectName" name="name" placeholder="name" maxlength="1" size="10" />
+            <input type="text" class="linkToDemo" name="name" placeholder="link to demo" maxlength="100" size="10" />
+            <input type="text" class="linkToCode" name="name" placeholder="link to code" maxlength="100" size="10" />
+            <span><input type="checkbox" class="commercial">commercial</span>
+            <button class="ajaxForAddingProjects">add project</button>
+        </form>
+
     </div>
+
+
+    <a>photos</a>
     <div>
         <input type="file">
         <select name="galleries" id="pet-select">
@@ -62,6 +69,7 @@
             <option value="drafts">drafts</option>
         </select>
     </div>
+
     <!-- TODO сделать тут табличку для редактирования уже имеющихся записей -->
     <table>
         <tr>

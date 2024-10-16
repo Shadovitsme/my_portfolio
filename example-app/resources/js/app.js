@@ -27,6 +27,19 @@ $('.js--ajax-test').on('click', () => {
 )
 }});
 
+// ajax for projects
+$('.ajaxForAddingProjects').on('click', () => {
+    if ( $('.projectName').val() === '' && $('.linkToDemo').val() === '' && $('.linkToCode').val() === ''){
+        alert('Не все поля заполнены');
+    }
+    else {
+        alert('its work')
+    }
+
+}
+)
+
+
 //чтобы кнопки меняли цвет при нажатии
 $(document).on('click', 'button', function() {
     if ($(this).attr('value') == 1 && ($(this).attr('class') == 'button-selected' || $(this).attr('class') == 'button-not-selected')) {
