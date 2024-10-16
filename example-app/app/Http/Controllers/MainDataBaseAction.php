@@ -25,7 +25,7 @@ class MainDataBaseAction extends Controller
 
     public function addProject()
     {
-        //TODO сделать возможн
+        //TODO сделать возможным загрузку фото не только из папки паблик
         $binaryImage = base64_encode(file_get_contents("images/plaseholder.webp"));
         if ($_GET['commercial'] === 'on') {
             $comStatus = 0;

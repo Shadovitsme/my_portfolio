@@ -6,8 +6,11 @@ use App\Models\projects;
 use App\Models\skills;
 use Illuminate\Support\Facades\DB;
 
+foreach (projects::all() as $flight) {
 
-
-// foreach (projects::all() as $flight) {
-//     echo $flight->name . '<br />';
-// } 
+    echo <<<HTML
+<div>
+  <img src="data:image;base64, $flight->icons" />
+</div>
+HTML;
+}
