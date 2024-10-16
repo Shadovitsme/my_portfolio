@@ -25,4 +25,6 @@ Route::get('/admin', function () {
 
 Route::controller(MainDataBaseAction::class)->group(function () {
     Route::get('/api', 'addSkill');
+    Route::get('/apiProject', 'addProject');
+
 });

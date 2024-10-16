@@ -45,10 +45,10 @@
     </div>
     <div>
         <a>projects</a>
-        <form class="ajaxForAddingProjects">
+        <form method="get">
             <!-- TODO сделать тут добавление файлов для иконок (перевод иконок в бинарники и обратно) -->
-            <input type="file" class="icon" name="name" placeholder="icon" maxlength="20" size="10" />
-            <input type="text" class="projectName" name="name" placeholder="name" maxlength="1" size="10" />
+            <input type="file" class="icon" size="10" />
+            <input type="text" class="projectName" name="name" placeholder="name" maxlength="100" size="10" />
             <input type="text" class="linkToDemo" name="name" placeholder="link to demo" maxlength="100" size="10" />
             <input type="text" class="linkToCode" name="name" placeholder="link to code" maxlength="100" size="10" />
             <span><input type="checkbox" class="commercial">commercial</span>

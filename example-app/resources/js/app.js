@@ -33,7 +33,24 @@ $('.ajaxForAddingProjects').on('click', () => {
         alert('Не все поля заполнены');
     }
     else {
-        alert('its work')
+        $.ajax(
+            {
+                url: '/apiProject',
+                method: 'get',
+                dataType: 'html',
+                data: {
+                    'iconPath' : $('.icon').val(),
+                    'projectName' : $('.projectName').val(),
+                    'linkToDemo' : $('.linkToDemo').val(),
+                    'linkToCode' : $('.linkToCode').val(),
+                    'commercial' : $('.commercial').val()
+                },
+                success: function(data){ 
+                    alert(data)  /* функция которая будет выполнена после успешного запроса.  */
+                }
+                
+            }
+        )
     }
 
 }
