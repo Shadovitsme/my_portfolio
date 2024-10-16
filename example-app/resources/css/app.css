@@ -4,7 +4,7 @@ body {
 }
 
 .padding {
-    padding: 50px
+    padding: 50px;
 }
 
 html {
@@ -23,25 +23,18 @@ html {
     transition: 1s;
 }
 
-#lang{
-    border: 0;
-    background-color: transparent;
-}
-#lang:focus{
-   outline: 0;
-}
 .head a {
     color: black;
     color: inherit;
 }
-    
+
 .head:hover {
-    transform: scale(1.2)
+    transform: scale(1.2);
 }
 
 header {
     text-align: center;
-    position:fixed;
+    position: fixed;
     z-index: 100;
     width: 100%;
 }
@@ -57,11 +50,13 @@ header {
 }
 
 .telegram-icon:hover {
-    filter: invert(45%) sepia(92%) saturate(545%) hue-rotate(150deg) brightness(94%) contrast(106%);
+    filter: invert(45%) sepia(92%) saturate(545%) hue-rotate(150deg)
+        brightness(94%) contrast(106%);
 }
 
 .phone-icon:hover {
-    filter: invert(37%) sepia(95%) saturate(3607%) hue-rotate(136deg) brightness(101%) contrast(101%);
+    filter: invert(37%) sepia(95%) saturate(3607%) hue-rotate(136deg)
+        brightness(101%) contrast(101%);
 }
 
 .github-icon {
@@ -75,49 +70,49 @@ header {
 /* контент главной страницы */
 
 hr {
-	margin: 20px 0;
-	padding: 0;
-	height: 3px;
-	border: none;
-	background: linear-gradient(45deg, #333, #ddd);
+    margin: 20px 0;
+    padding: 0;
+    height: 3px;
+    border: none;
+    background: linear-gradient(45deg, #333, #ddd);
 }
 
-.hi-text{
+.hi-text {
     position: absolute;
     top: 50%;
     left: 60%;
-    transform: translate(-50%, -50%)
+    transform: translate(-50%, -50%);
 }
 
 .textcols {
-	white-space: nowrap;
+    white-space: nowrap;
 }
 .textcols-item {
-	white-space: normal;	
-	display: inline-block;
-	width: 30%;
-	vertical-align: top;
+    white-space: normal;
+    display: inline-block;
+    width: 30%;
+    vertical-align: top;
 }
 .textcols .textcols-item:first-child {
-	margin-right: 4%;
+    margin-right: 4%;
 }
-.main-page-image{
+.main-page-image {
     width: 50%;
 }
 
-.big-hello{
-    font-size:small;
+.big-hello {
+    font-size: small;
 }
 
-.myName{
+.myName {
     font-size: xx-large;
     margin: 10% 0% 10% 0%;
 }
 
 /* skills */
-.ajaxMenuBeckground{
+.ajaxMenuBeckground {
     text-align: center;
-    border:2px solid rgb(231, 188, 224);
+    border: 2px solid rgb(231, 188, 224);
     border-radius: 10px;
     width: 20%;
     position: fixed;
@@ -127,7 +122,7 @@ hr {
     margin-bottom: 20px;
 }
 
-.button-not-selected{
+.button-not-selected {
     border-radius: 10px;
     background-color: rgb(188, 182, 235);
     padding: 3%;
@@ -135,7 +130,7 @@ hr {
     margin: 5px;
 }
 
-.button-selected{
+.button-selected {
     background-color: rgb(129, 120, 201);
     border-radius: 10px;
     padding: 3%;
@@ -143,124 +138,33 @@ hr {
     margin: 5px;
 }
 
-.map_legend{
-    text-align: center;
-    padding: 0 0 2% 0;
-}
-.map_legend_table{
-margin: auto;
-}
-.big-table{
-    width: 72%;
-    position: fixed;
-    left: 0%;
-    text-align: center;
-    padding-left: 50px;
-}
-
-.skillTable{
-    vertical-align: middle;
-    font-size: large;
-    border: 1px solid grey;
-    border-collapse: collapse;
-    width: 100%;
-}
-.skillTable tr{
-    vertical-align: middle;
-    font-size: large;
-    border: 1px solid grey;
-    border-collapse: collapse;
-}
-.skillTable tr td{
-    overflow-wrap: break-word; word-break: break-word;
-    vertical-align: middle;
-    font-size: large;
-    border: 1px solid grey;
-    border-collapse: collapse;
-    padding: 5px;
-}
-.first_column{
-    width: 10%;
-}
-.second_column{
-    width: 45%;
-}
-.ajaxBlocks{
+.ajaxBlocks {
     padding: 0 0 2% 0;
 }
 
 .button-block {
-    padding: 2% 0% 5% 0
+    padding: 2% 0% 5% 0;
 }
-#five{
+.five {
     color: rgb(2, 211, 20);
 }
 
-#four{
+.four {
     color: #60d103;
 }
 
-#tre{
+.tre {
     color: orange;
 }
 
-#two{
+.two {
     color: #d17e46;
 }
 
-#one{
+.one {
     color: red;
-} 
-
-/* portfolio */
-.big-table-portfolio{
-    position: fixed;
-    text-align: center;
-    padding-left: 50px;
-    padding-right: 50px;
-}
-.PortfolioTable{
-    vertical-align: middle;
-    font-size: large;
-    border: 1px solid grey;
-    border-collapse: collapse;
-    width: 100%;
 }
 
-.PortfolioTable tr{
-    vertical-align: middle;
-    font-size: large;
-    border: 1px solid grey;
-}
-
-.PortfolioTable th{
-    vertical-align: middle;
-    padding-top: 5px;
-    font-size: large;
-}
-.PortfolioTable tr td{
-    overflow-wrap: break-word; word-break: break-word;
-    vertical-align: middle;
-    font-size: large;
-    padding: 5px;
-    text-align: center;
-    border: 1px solid grey;
-    
-}
-.first_column_port{
-    width: 5%;
-}
-.second_column_port{
-    width: 40%;
-}
-.third_column_port{
-    width: 40%
-}
-.four_column_port{
-width: 15%;
-}
-
-.portfolioIcon{
-    width: 50px;
-    height: 50px;
+/* админ панель */
+input:focus {
 }

@@ -3,6 +3,7 @@ import jQuery from 'jquery';
 window.$ = jQuery;
 
 $('.js--ajax-test').on('click', () => {
+    
     $.ajax(
         {
             url: '/api',         /* Куда пойдет запрос */
@@ -13,7 +14,8 @@ $('.js--ajax-test').on('click', () => {
                 'project' : 'NULL'
 
             },   /* Параметры передаваемые в запросе. */
-            success: function(data){   /* функция которая будет выполнена после успешного запроса.  */
+            success: function(data){ 
+                alert('wow!')  /* функция которая будет выполнена после успешного запроса.  */
             }
         }
 )

@@ -11,8 +11,6 @@ class MainDataBaseAction extends Controller
 {
     public function addSkill(Request $request)
     {
-        $skill = new skills;
-        // var_dump($_GET['skill']);
         DB::table('skills')->insert([
             ['name' => $_GET['skill'], 'level_id' => $_GET['level']],
         ]);

@@ -12,8 +12,8 @@
     <div>
         <!-- TODO сделать проверку на корректное заполнение -->
         <form name="form" class="class='js--ajax-test" method="get">
-            <input type="text" id="name" name="name" value="skill" maxlength="20" size="10" />
-            <select name="pets" id="level-select">
+            <input type="text" id="name" name="name" placeholder="skill" maxlength="20" size="10" />
+            <select name="skills_leve" id="level-select">
                 <option value="">--Please choose an level--</option>
                 <option class="one" value="1">1</option>
                 <option class="two" value="2">2</option>
@@ -21,8 +21,11 @@
                 <option class="four" value="4">4</option>
                 <option class="five" value="5">5</option>
             </select>
-            <input type="text" id="name" name="name" value="where used" maxlength="100" size="10" />
-            <button class="js--ajax-test">add skill</button>
+            <select name="pets" id="level-select">
+                <option value="">--Please choose an project--</option>
+                <x-addProjects>$projects</x-addProjects>
+
+            </select> <button class="js--ajax-test">add skill</button>
         </form>
 
         <?php
@@ -35,10 +38,10 @@
     </div>
     <div>
         <!-- TODO сделать тут добавление файлов для иконок -->
-        <input type="file" id="name" name="name" value="icon" maxlength="20" size="10" />
-        <input type="text" id="name" name="name" value="name" maxlength="1" size="10" />
-        <input type="text" id="name" name="name" value="link to demo" maxlength="100" size="10" />
-        <input type="text" id="name" name="name" value="link to code" maxlength="100" size="10" />
+        <input type="file" id="name" name="name" placeholder="icon" maxlength="20" size="10" />
+        <input type="text" id="name" name="name" placeholder="name" maxlength="1" size="10" />
+        <input type="text" id="name" name="name" placeholder="link to demo" maxlength="100" size="10" />
+        <input type="text" id="name" name="name" placeholder="link to code" maxlength="100" size="10" />
         <span><input type="checkbox">commercial</span>
         <button>add project</button>
     </div>
@@ -46,12 +49,11 @@
         <input type="file">
         <select name="galleries" id="pet-select">
             <option value="">--Please choose an option--</option>
-            <option value="dog">pets</option>
-            <option value="cat">plants</option>
-            <option value="hamster">stitches</option>
-            <option value="parrot">drafts</option>
+            <option value="pets">pets</option>
+            <option value="plants">plants</option>
+            <option value="stitches">stitches</option>
+            <option value="drafts">drafts</option>
         </select>
-        <x-test>$test</x-test>
     </div>
     <!-- TODO сделать тут табличку для редактирования уже имеющихся записей -->
     <table>
