@@ -1,4 +1,5 @@
 <html lang="ru">
+<!-- TODO технический долг нуждается в рефакторинге -->
 
 <head>
     <meta charset="UTF-8">
@@ -9,11 +10,13 @@
 </head>
 
 <body>
+    <x-test>$test</x-test>
     <div>
         <!-- TODO сделать проверку на корректное заполнение -->
         <form name="form" class="class='js--ajax-test" method="get">
-            <input type="text" id="name" name="name" placeholder="skill" maxlength="20" size="10" />
-            <select name="skills_leve" id="level-select">
+            <input type="text" class="skills_name" id="name" name="name" placeholder="skill" maxlength="20" size="10" />
+
+            <select class="skills_level_selector" name="skills_leve;" id="level-select">
                 <option value="">--Please choose an level--</option>
                 <option class="one" value="1">1</option>
                 <option class="two" value="2">2</option>
@@ -21,11 +24,13 @@
                 <option class="four" value="4">4</option>
                 <option class="five" value="5">5</option>
             </select>
-            <select name="pets" id="level-select">
+
+            <select class="project_selector" name="pets" id="level-select">
                 <option value="">--Please choose an project--</option>
                 <x-addProjects>$projects</x-addProjects>
+            </select>
+            <button class="js--ajax-test">add skill</button>
 
-            </select> <button class="js--ajax-test">add skill</button>
         </form>
 
         <?php
@@ -34,7 +39,9 @@
         use Illuminate\Http\Request;
 
         $request = new Request;
-        $name = $request->input('post'); ?>
+        $name = $request->input('post');
+        ?>
+
     </div>
     <div>
         <!-- TODO сделать тут добавление файлов для иконок -->

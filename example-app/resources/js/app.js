@@ -2,8 +2,14 @@ import jQuery from 'jquery';
 
 window.$ = jQuery;
 
+//аякс админ панели для добавления скилов
 $('.js--ajax-test').on('click', () => {
-    
+
+    if ($('.skills_name').val() === '' && $('.skills_level_selector').val() === '' && $('.project_selector').val() === ''){
+        alert('Не все поля заполнены');
+  
+    }
+    else{
     $.ajax(
         {
             url: '/api',         /* Куда пойдет запрос */
@@ -11,15 +17,15 @@ $('.js--ajax-test').on('click', () => {
             dataType: 'html',          /* Тип данных в ответе (xml, json, script, html). */
             data: { 'skill': $('#name').val(),
                 'level' : $('#level-select').val(),
-                'project' : 'NULL'
+                'project' : $('.project_selector').val()
 
             },   /* Параметры передаваемые в запросе. */
             success: function(data){ 
-                alert('wow!')  /* функция которая будет выполнена после успешного запроса.  */
+                alert('Навык добавлен')  /* функция которая будет выполнена после успешного запроса.  */
             }
         }
 )
-});
+}});
 
 //чтобы кнопки меняли цвет при нажатии
 $(document).on('click', 'button', function() {
