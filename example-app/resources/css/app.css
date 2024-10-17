@@ -145,26 +145,22 @@ hr {
 .button-block {
     padding: 2% 0% 5% 0;
 }
-.five {
+#five {
     color: rgb(2, 211, 20);
 }
 
-.four {
+#four {
     color: #60d103;
 }
 
-.tre {
+#tre {
     color: orange;
 }
 
-.two {
+#two {
     color: #d17e46;
 }
 
-.one {
+#one {
     color: red;
-}
-
-/* админ панель */
-input:focus {
 }

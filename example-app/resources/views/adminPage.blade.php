@@ -10,7 +10,6 @@
 </head>
 
 <body>
-    <x-test>$test</x-test>
     <div>
         <form name="form" class="class='js--ajax-test" method="get">
             <!-- TODO добавить множественный выбор проектов -->
@@ -33,20 +32,10 @@
 
         </form>
 
-        <?php
-
-        use Illuminate\Http\RedirectResponse;
-        use Illuminate\Http\Request;
-
-        $request = new Request;
-        $name = $request->input('post');
-        ?>
-
     </div>
     <div>
         <a>projects</a>
         <form method="get">
-            <!-- TODO сделать тут добавление файлов для иконок (перевод иконок в бинарники и обратно) -->
             <input type="file" class="icon" size="10" />
             <input type="text" class="projectName" name="name" placeholder="name" maxlength="100" size="10" />
             <input type="text" class="linkToDemo" name="name" placeholder="link to demo" maxlength="100" size="10" />
@@ -60,27 +49,31 @@
 
     <a>photos</a>
     <div>
-        <input type="file">
-        <select name="galleries" id="pet-select">
-            <option value="">--Please choose an option--</option>
-            <option value="pets">pets</option>
-            <option value="plants">plants</option>
-            <option value="stitches">stitches</option>
-            <option value="drafts">drafts</option>
-        </select>
+        <form method="get">
+            <input class="photofile" type="file">
+            <select class="photoBase" name="galleries" id="pet-select">
+                <option value="">--Please choose an option--</option>
+                <option value="pets">pets</option>
+                <option value="plants">plants</option>
+                <option value="stitches">stitches</option>
+                <option value="drafts">drafts</option>
+            </select>
+            <button class="ajaxForGallery">add photo to gallery</button>
+        </form>
     </div>
 
+    <select class="dataBases">
+        <option value="">--Please choose an option--</option>
+        <option class="dbSwitch" value="my_drafts">my_drafts</option>
+        <option class="dbSwitch" value="my_plants">my_plants</option>
+        <option class="dbSwitch" value="my_pets">my_pets</option>
+        <option class="dbSwitch" value="my_stitches">my_stitches</option>
+        <option class="dbSwitch" value="projects">projects</option>
+        <option class="dbSwitch" value="skills">skills</option>
+    </select>
+    <x-tableAdminGenerate>$adminTable</x-tableAdminGenerate>
     <!-- TODO сделать тут табличку для редактирования уже имеющихся записей -->
-    <table>
-        <tr>
-            <th>текст заголовка</th>
-            <th>текст заголовка</th>
-        </tr> <!--ряд с ячейками заголовков-->
-        <tr>
-            <td>данные</td>
-            <td>данные</td>
-        </tr> <!--ряд с  ячейками тела таблицы-->
-    </table>
+
 </body>
 
 </html>

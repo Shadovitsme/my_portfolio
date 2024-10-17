@@ -13,14 +13,13 @@
     <x-header>$head</x-header>
     <div class="padding"></div>
     <x-contacts>$contacts</x-contacts>
-    <!-- TODO добавить кнопку найти -->
+    <!-- TODO добавить рабочую кнопку найти -->
     <div class="ajaxMenuBeckground">
         <div class="ajaxBlocks">
             <span>Собери свой стек!</span>
         </div>
         <div class='button-block'>
-            <button value='0' class="button-not-selected">Придумать как делать <br /> эти кнопки из бд</button>
-            <!-- TODO придумать как генерировать кнопки по данным из бд -->
+            <x-skillsButtons>$button</x-skillsButtons>
         </div>
         <div class="ajaxBlocks">
             <input type="checkbox">
@@ -58,23 +57,16 @@
 
             </table>
         </div>
-
+        <button>Найти</button>
     </div>
     <div class="big-table">
         <table class="skillTable">
-            <!-- TODO сделать заполнение таблицы из бд -->
-            <!-- TODO сделать оформление по цсс -->
             <tr>
                 <td class="first_column">Навыки</td>
                 <td class="second_column">Уровень</td>
                 <td class="third_column">Где применялось</td>
-            </tr> <!--ряд с ячейками заголовков-->
-            <tr>
-                <td>данные</td>
-                <td>даdjfalkdsjklsdjlkjsldjaslkdjlksdjlkjslkdjfнные</td>
-                <!-- TODO сделать так чтобы длинный текст автоматом переносился а не уплывал -->
-                <td>данdsafljklfjsdklfjsdlfjdslfjksdjflksdjldsjfljsdlfjsljsdlfjsalkные</td>
-            </tr> <!--ряд с ячейками тела таблицы-->
+            </tr>
+            <x-skillsTable>$skillsTable</x-skillsTable>
         </table>
 
     </div>

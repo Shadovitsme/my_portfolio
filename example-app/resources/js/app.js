@@ -56,6 +56,47 @@ $('.ajaxForAddingProjects').on('click', () => {
 }
 )
 
+$('.ajaxForGallery').on('click', () => {
+    if ( $('.photofile').val() === '' && $('.photoBase').val() === '' ){
+        alert('Не все поля заполнены');
+    }
+    else {
+        $.ajax(
+            {
+                url: '/apiPhoto',
+                method: 'get',
+                dataType: 'html',
+                data: {
+                    'photo' : $('.photofile').val(),
+                    'photoBase' : $('.photoBase').val(),
+                },
+                success: function(data){ 
+                    alert(data)  /* функция которая будет выполнена после успешного запроса.  */
+                }
+                
+            }
+        )
+    
+    }
+}
+)
+
+// $('.dataBases').on('change', () => {
+//     $.ajax(
+//         {
+//             url: '/apiShowDb',
+//             method: 'get',
+//             dataType: 'html',
+//             data: {
+//                 'db' : $('.dbSwitch').val(),
+//             },
+//             success: function(data){ 
+//                 alert(data)  
+//             }
+            
+//         }
+//     )
+// })
 
 //чтобы кнопки меняли цвет при нажатии
 $(document).on('click', 'button', function() {

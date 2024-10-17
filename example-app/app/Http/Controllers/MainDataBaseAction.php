@@ -42,4 +42,45 @@ class MainDataBaseAction extends Controller
             ]
         ]);
     }
+
+    public function addPhoto()
+    {
+        $binaryImage = base64_encode(file_get_contents("images/plaseholder.webp"));
+        switch ($_GET['photoBase']) {
+            case 'pets':
+                $db = 'my_pets';
+                $photoPlase = 'pets';
+                break;
+            case 'plants':
+                $db = 'my_plants';
+                $photoPlase = 'plants';
+                break;
+            case 'stitches':
+                $db = 'my_stitches';
+                $photoPlase = 'stitches';
+                break;
+            case 'drafts':
+                $db = 'my_drafts';
+                $photoPlase = 'drafts';
+                break;
+        }
+
+        echo $db;
+        DB::table($db)->insert([
+            [
+                $photoPlase => $binaryImage,
+            ]
+        ]);
+    }
+
+    // public function returnDbShow()
+    // {
+    //     echo '<table>';
+    //     switch ($_GET['db']) {
+    //     }
+    //     echo '</table>';
+    // }
+
+    // private function showSkils() {}
+
 }
