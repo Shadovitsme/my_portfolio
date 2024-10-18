@@ -81,23 +81,8 @@ $('.ajaxForGallery').on('click', () => {
 }
 )
 
-// $('.dataBases').on('change', () => {
-//     $.ajax(
-//         {
-//             url: '/apiShowDb',
-//             method: 'get',
-//             dataType: 'html',
-//             data: {
-//                 'db' : $('.dbSwitch').val(),
-//             },
-//             success: function(data){ 
-//                 alert(data)  
-//             }
-            
-//         }
-//     )
-// })
-
+var selectarray = [];
+var skillLevelArray = [];
 //чтобы кнопки меняли цвет при нажатии
 $(document).on('click', 'button', function() {
     if ($(this).attr('value') == 1 && ($(this).attr('class') == 'button-selected' || $(this).attr('class') == 'button-not-selected')) {
@@ -105,12 +90,28 @@ $(document).on('click', 'button', function() {
          $(this).toggleClass("button-not-selected");
         $(this).removeAttr('value');
         $(this).attr('value', '0');
+        if ($(this).attr('id') == 'skill'){
+            selectarray.slice(selectarray.indexOf($(this).text(),1));
+        }
+        else{
+            skillLevelArray.slice(selectarray.indexOf($(this).text(),1));
+
+        }
+
     } else {
         $(this).removeClass('button-not-selected');
         $(this).toggleClass("button-selected");
         // $(this).attr("class")=  "button-selected js--button";
         $(this).removeAttr('value');
         $(this).attr('value', '1');
-
+        if ($(this).attr('id') == 'skill'){
+            selectarray.push(($(this).text()));
+        }
+        else {
+            skillLevelArray.push(($(this).text()));
+ 
+        }
     }
+    alert (selectarray);
+    alert (skillLevelArray);
 });
