@@ -164,3 +164,30 @@ hr {
 #one {
     color: red;
 }
+
+/* portfolio */
+.PortfolioTable{
+    width: 100%;
+    text-align: center;
+
+}
+.big-table-portfolio{
+text-align: center;
+margin-left: 50px
+}
+
+.portfolioIcon{
+    width: 50px;
+}
+.first_column_port{
+    width: 10%;
+}
+.second_column_port{
+    width: 30%;
+}
+.third_column_port{
+    width: 30%;
+}
+.four_column_port{
+    width: 30%;
+}

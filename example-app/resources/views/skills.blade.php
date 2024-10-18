@@ -57,7 +57,8 @@
 
             </table>
         </div>
-        <button>Найти</button>
+        <!-- TODO узнать как в аяксе сделать поисковики а не добавление в бд -->
+        <button class="searchSteck">Найти</button>
     </div>
     <div class="big-table">
         <table class="skillTable">
