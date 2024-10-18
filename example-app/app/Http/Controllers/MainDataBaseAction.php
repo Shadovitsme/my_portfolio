@@ -73,14 +73,55 @@ class MainDataBaseAction extends Controller
         ]);
     }
 
-    // public function returnDbShow()
-    // {
-    //     echo '<table>';
-    //     switch ($_GET['db']) {
-    //     }
-    //     echo '</table>';
-    // }
+    public function skillSearch()
+    {
+        $newAjaxSkillString = <<<htmlhead
+                <table class="skillTable">
+            <tr>
+                <td class="first_column">Навыки</td>
+                <td class="second_column">Уровень</td>
+                <td class="third_column">Где применялось</td>
+            </tr>
+        htmlhead;
 
-    // private function showSkils() {}
+        if (!empty($_GET['levels']) && !empty($_GET['skills'])) {
+            $skills = DB::table('skills')
+            ->whereIn('level_id', $_GET['levels'])
+            ->whereIn('name', $_GET['skills'])
+            ->get();
+        } elseif (!empty($_GET['levels'])) {
+            $skills = DB::table('skills')
+            ->whereIn('level_id', $_GET['levels'])
+            ->get();
+        } elseif (!empty($_GET['skills'])) {
+            $skills = DB::table('skills')
+            ->whereIn('name', $_GET['skills'])
+            ->get();
+        } else {
+            $skills = DB::table('skills')->get();
+        }
+
+        foreach ($skills as $skill) {
+            $projName = DB::table('projects')->where('id', '=', $skill->where_used_id)->get('name');
+            if (!empty($projName[0])) {
+                $n = $projName[0]->name;
+            } else {
+                $n = 'null';
+            }
+            //TODO сделать заполнение айдишкников уровней чтобы цветное было
+            $newAjaxSkillString .= <<<html
+                    <tr>
+                        <td>$skill->name</td>
+                        <td>$skill->level_id</td>
+                        <td>$n</td>
+                    </tr> <!--ряд с ячейками тела таблицы-->
+            html;
+        }
+
+
+        $newAjaxSkillString .= '</table>';
+
+        return $newAjaxSkillString;
+    }
 
 }

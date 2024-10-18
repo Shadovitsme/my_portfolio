@@ -91,17 +91,15 @@ $(document).on('click', 'button', function() {
         $(this).removeAttr('value');
         $(this).attr('value', '0');
         if ($(this).attr('id') == 'skill'){
-            selectarray.slice(selectarray.indexOf($(this).text(),1));
+            selectarray.splice(selectarray.indexOf($(this).text()),1);
         }
-        else{
-            skillLevelArray.slice(selectarray.indexOf($(this).text(),1));
-
+        {
+            skillLevelArray.splice(skillLevelArray.indexOf($(this).text()),1);
         }
 
     } else {
         $(this).removeClass('button-not-selected');
         $(this).toggleClass("button-selected");
-        // $(this).attr("class")=  "button-selected js--button";
         $(this).removeAttr('value');
         $(this).attr('value', '1');
         if ($(this).attr('id') == 'skill'){
@@ -111,7 +109,24 @@ $(document).on('click', 'button', function() {
             skillLevelArray.push(($(this).text()));
  
         }
+
     }
-    alert (selectarray);
-    alert (skillLevelArray);
+    $.ajax(
+        {
+            url: '/apiSearchSkills',
+            method: 'get',
+            dataType: 'html',
+            data: {
+                'skills' : selectarray,
+                'levels' : skillLevelArray,
+            },
+            success: function(data){ 
+ /* функция которая будет выполнена после успешного запроса.  */
+                $('.skillTable').replaceWith(data);
+            }
+            
+        }
+    )
+
 });
+

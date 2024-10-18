@@ -28,5 +28,6 @@ Route::controller(MainDataBaseAction::class)->group(function () {
     Route::get('/apiProject', 'addProject');
     Route::get('/apiPhoto', 'addPhoto');
     Route::get('/apiShowDb', 'returnDbShow');
+    Route::get('/apiSearchSkills', 'skillSearch');
 
 });
