@@ -126,7 +126,7 @@ class MainDataBaseAction extends Controller
                     $skillLevelId = 'five';
                     break;
             };
-            $skillLevelId = "id = '" . $skillLevelId . "'";
+            $skillLevelId = "class = '" . $skillLevelId . "'";
 
             $newAjaxSkillString .= <<<html
                     <tr>

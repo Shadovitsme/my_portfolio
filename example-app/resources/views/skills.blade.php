@@ -25,32 +25,42 @@
             <span>Есть опыт коммерческой разработки</span>
         </div>
         <div class="button-block">
-            <button value='0' class="button-not-selected" id="1">1</button>
-            <button value='0' class="button-not-selected" id="2">2</button>
-            <button value='0' class="button-not-selected" id="3">3</button>
-            <button value='0' class="button-not-selected" id="4">4</button>
-            <button value='0' class="button-not-selected" id="5">5</button>
+            <button value='0' class="button-not-selected">
+                <p class='one'>1</p>
+            </button>
+            <button value='0' class="button-not-selected">
+                <p class='two'>2</p>
+            </button>
+            <button value='0' class="button-not-selected">
+                <p class='three'>3</p>
+            </button>
+            <button value='0' class="button-not-selected">
+                <p class='four'>4</p>
+            </button>
+            <button value='0' class="button-not-selected">
+                <p class='five'>5</p>
+            </button>
         </div>
         <div class="map_legend">
             <table class="map_legend_table">
                 <tr>
-                    <td id="one">1</td>
+                    <td class="one">1</td>
                     <td>Базовые навыки</td>
                 </tr>
                 <tr>
-                    <td id="two">2</td>
+                    <td class="two">2</td>
                     <td>Ниже среднего</td>
                 </tr>
                 <tr>
-                    <td id="three">3</td>
+                    <td class="three">3</td>
                     <td>Средний уровень</td>
                 </tr>
                 <tr>
-                    <td id="four">4</td>
+                    <td class="four">4</td>
                     <td>Выше среднего</td>
                 </tr>
                 <tr>
-                    <td id="five">5</td>
+                    <td class="five">5</td>
                     <td>Владею <br /> на высоком уровне</td>
                 </tr>
 

@@ -19,7 +19,7 @@
                 <option value="">--Please choose an level--</option>
                 <option class="one" value="1">1</option>
                 <option class="two" value="2">2</option>
-                <option class="tre" value="3">3</option>
+                <option class="three" value="3">3</option>
                 <option class="four" value="4">4</option>
                 <option class="five" value="5">5</option>
             </select>

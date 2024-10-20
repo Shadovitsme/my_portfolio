@@ -11,7 +11,7 @@ foreach (skills::all() as $skill) {
     } else {
         $n = 'null';
     }
-    $skillLevelId = "id = '" . chooseIdForSkillLevel($skill->level_id) . "'";
+    $skillLevelId = "class = '" . chooseIdForSkillLevel($skill->level_id) . "'";
     echo <<<html
             <tr>
                 <td>$skill->name</td>
