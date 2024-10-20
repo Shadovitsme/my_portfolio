@@ -72,7 +72,6 @@
         <option class="dbSwitch" value="skills">skills</option>
     </select>
     <x-tableAdminGenerate>$adminTable</x-tableAdminGenerate>
-    <!-- TODO сделать тут табличку для редактирования уже имеющихся записей -->
 
 </body>
 

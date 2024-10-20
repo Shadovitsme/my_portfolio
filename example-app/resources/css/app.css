@@ -13,6 +13,7 @@ html {
     font-style: normal;
 }
 /* TODO рефакторнуть это чтобы читать стало проще */
+/* TODO изменить назначение стилей на уровень навыков с айдишника */
 /* заголовок */
 .head {
     display: inline-block;
@@ -153,7 +154,7 @@ hr {
     color: #60d103;
 }
 
-#tre {
+#three {
     color: orange;
 }
 

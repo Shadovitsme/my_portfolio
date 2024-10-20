@@ -13,7 +13,6 @@
     <x-header>$head</x-header>
     <div class="padding"></div>
     <x-contacts>$contacts</x-contacts>
-    <!-- TODO добавить рабочую кнопку найти -->
     <div class="ajaxMenuBeckground">
         <div class="ajaxBlocks">
             <span>Собери свой стек!</span>
@@ -26,11 +25,11 @@
             <span>Есть опыт коммерческой разработки</span>
         </div>
         <div class="button-block">
-            <button value='0' class="button-not-selected" id="one">1</button>
-            <button value='0' class="button-not-selected" id="two">2</button>
-            <button value='0' class="button-not-selected" id="tre">3</button>
-            <button value='0' class="button-not-selected" id="four">4</button>
-            <button value='0' class="button-not-selected" id="five">5</button>
+            <button value='0' class="button-not-selected" id="1">1</button>
+            <button value='0' class="button-not-selected" id="2">2</button>
+            <button value='0' class="button-not-selected" id="3">3</button>
+            <button value='0' class="button-not-selected" id="4">4</button>
+            <button value='0' class="button-not-selected" id="5">5</button>
         </div>
         <div class="map_legend">
             <table class="map_legend_table">
@@ -43,7 +42,7 @@
                     <td>Ниже среднего</td>
                 </tr>
                 <tr>
-                    <td id="tre">3</td>
+                    <td id="three">3</td>
                     <td>Средний уровень</td>
                 </tr>
                 <tr>
@@ -57,8 +56,6 @@
 
             </table>
         </div>
-        <!-- TODO узнать как в аяксе сделать поисковики а не добавление в бд -->
-        <button class="searchSteck">Найти</button>
     </div>
     <div class="big-table">
         <table class="skillTable">

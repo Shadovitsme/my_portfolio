@@ -15,7 +15,6 @@
 
     <div class="big-table-portfolio">
         <table class="PortfolioTable">
-            <!-- TODO сделать заполнение таблицы из бд -->
             <tr>
                 <th class="first_column_port"></th>
                 <th class="second_column_port">Демонстрация</th>
