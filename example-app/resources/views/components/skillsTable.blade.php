@@ -21,6 +21,7 @@ foreach (skills::all() as $skill) {
     html;
 }
 
+// TODO вынести этот метод в отдельный фаил чтоб потом вызывать тут
 function chooseIdForSkillLevel($number)
 {
     switch ($number) {
