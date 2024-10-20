@@ -11,12 +11,28 @@ foreach (skills::all() as $skill) {
     } else {
         $n = 'null';
     }
-    //TODO сделать заполнение айдишкников уровней чтобы цветное было
+    $skillLevelId = "id = '" . chooseIdForSkillLevel($skill->level_id) . "'";
     echo <<<html
             <tr>
                 <td>$skill->name</td>
-                <td>$skill->level_id</td>
+                <td $skillLevelId >$skill->level_id</td>
                 <td>$n</td>
             </tr> <!--ряд с ячейками тела таблицы-->
     html;
+}
+
+function chooseIdForSkillLevel($number)
+{
+    switch ($number) {
+        case 1:
+            return 'one';
+        case 2:
+            return 'two';
+        case 3:
+            return 'three';
+        case 4:
+            return 'four';
+        case 5:
+            return 'five';
+    }
 }
