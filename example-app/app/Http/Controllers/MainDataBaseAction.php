@@ -100,6 +100,7 @@ class MainDataBaseAction extends Controller
         } else {
             $skills = DB::table('skills')->get();
         }
+        
 
         foreach ($skills as $skill) {
             $projName = DB::table('projects')->where('id', '=', $skill->where_used_id)->get('name');
@@ -108,11 +109,29 @@ class MainDataBaseAction extends Controller
             } else {
                 $n = 'null';
             }
-            //TODO сделать заполнение айдишкников уровней чтобы цветное было
+            switch ($skill->level_id) {
+                case 1:
+                    $skillLevelId = 'one';
+                    break;
+                case 2:
+                    $skillLevelId = 'two';
+                    break;
+                case 3:
+                    $skillLevelId = 'three';
+                    break;
+                case 4:
+                    $skillLevelId = 'four';
+                    break;
+                case 5:
+                    $skillLevelId = 'five';
+                    break;
+            };
+            $skillLevelId = "id = '" . $skillLevelId . "'";
+
             $newAjaxSkillString .= <<<html
                     <tr>
                         <td>$skill->name</td>
-                        <td>$skill->level_id</td>
+                        <td $skillLevelId>$skill->level_id</td>
                         <td>$n</td>
                     </tr> <!--ряд с ячейками тела таблицы-->
             html;
@@ -123,5 +142,6 @@ class MainDataBaseAction extends Controller
 
         return $newAjaxSkillString;
     }
+
 
 }
