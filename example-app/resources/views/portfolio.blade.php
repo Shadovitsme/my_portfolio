@@ -16,7 +16,7 @@
     <div class="big-table-portfolio">
         <table class="PortfolioTable">
             <tr>
-                <th class="first_column_port"></th>
+                <th class="first_column_port"> Название</th>
                 <th class="second_column_port">Демонстрация</th>
                 <th class="third_column_port">Код</th>
                 <th class="four_column_port">Описание</th>

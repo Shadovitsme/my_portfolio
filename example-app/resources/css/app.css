@@ -54,7 +54,7 @@ header {
         brightness(94%) contrast(106%);
 }
 
-.phone-icon:hover {
+.email-icon:hover {
     filter: invert(37%) sepia(95%) saturate(3607%) hue-rotate(136deg)
         brightness(101%) contrast(101%);
 }
@@ -188,4 +188,15 @@ margin-left: 50px
 }
 .four_column_port{
     width: 30%;
+}
+
+.big-table{
+    /* align-items: center; */
+    justify-content: center;
+    /* text-align: center; */
+    display: flex;
+}
+
+.skillTable{
+
 }

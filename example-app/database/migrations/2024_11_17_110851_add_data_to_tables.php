@@ -22,7 +22,6 @@ return new class extends Migration
         ]);
 
         $arProjects = array();
-        // TODO юзать инсерт гет айди и записать в массив где название - ключ а айди значение
         $arProjects['OM_Soft'] = DB::table('projects')->insertGetId(
             ['name' => 'OM_Soft', 'link_to_demo' => 'Null', 'link_to_code' => 'null', 'commercial' => 1],
         );
