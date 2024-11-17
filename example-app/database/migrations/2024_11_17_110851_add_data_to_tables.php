@@ -23,7 +23,7 @@ return new class extends Migration
 
         $arProjects = array();
         $arProjects['OM_Soft'] = DB::table('projects')->insertGetId(
-            ['name' => 'OM_Soft', 'link_to_demo' => 'Null', 'link_to_code' => 'null', 'commercial' => 1],
+            ['name' => 'OM_Soft', 'link_to_demo' => 'https://www.samsonopt.ru/?ysclid=m3lp21wnla337419618', 'link_to_code' => 'never', 'commercial' => 1],
         );
         $arProjects['EveryDaynik!'] =
             DB::table('projects')->insertGetId(

@@ -54,7 +54,7 @@ header {
         brightness(94%) contrast(106%);
 }
 
-.email-icon:hover {
+.phone-icon:hover {
     filter: invert(37%) sepia(95%) saturate(3607%) hue-rotate(136deg)
         brightness(101%) contrast(101%);
 }
@@ -79,9 +79,7 @@ hr {
 
 .hi-text {
     position: absolute;
-    top: 50%;
-    left: 60%;
-    transform: translate(-50%, -50%);
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); 
 }
 
 .textcols {
@@ -191,9 +189,7 @@ margin-left: 50px
 }
 
 .big-table{
-    /* align-items: center; */
     justify-content: center;
-    /* text-align: center; */
     display: flex;
 }
 
