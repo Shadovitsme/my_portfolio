@@ -35,19 +35,19 @@ return new class extends Migration
         });
         Schema::create('projects', function (Blueprint $table) {
             $table->id()->primary()->autoIncrement();
-            $table->binary('icons');
             $table->string('name');
-            $table->string('link_to_demo');
-            $table->string('link_to_code');
             $table->boolean('commercial');
+            $table->string('link_to_demo')->nullable();
+            $table->string('link_to_code')->nullable();
             $table->timestamps();
         });
         Schema::create('skills', function (Blueprint $table) {
             $table->id()->primary()->autoIncrement();
             $table->string('name');
             $table->unsignedBigInteger('level_id');
+            $table->unsignedBigInteger('where_used_id')->nullable();
             $table->foreign('level_id')->references('id')->on('skills_level');
-            $table->foreignId('where_used_id')->nullable()->references('id')->on('projects');
+            $table->foreign('where_used_id')->references('id')->on('projects');
             $table->timestamps();
         });
         Schema::create('my_drafts', function (Blueprint $table) {
@@ -55,17 +55,6 @@ return new class extends Migration
             $table->binary('drafts');
             $table->timestamps();
         });
-        DB::table('skills_level')->insert([
-            ['level' => '1'],
-            ['level' => '2'],
-            ['level' => '3'],
-            ['level' => '4'],
-            ['level' => '5'],
-        ]);
-        DB::table('skills')->insert([
-            ['name' => 'PHP', 'level_id' => '3'],
-            ['name' => 'Docker', 'level_id' => '3'],
-        ]);
     }
 
     /**
