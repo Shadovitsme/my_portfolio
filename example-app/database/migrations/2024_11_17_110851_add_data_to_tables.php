@@ -23,11 +23,17 @@ return new class extends Migration
 
         $arProjects = array();
         $arProjects['OM_Soft'] = DB::table('projects')->insertGetId(
-            ['name' => 'OM_Soft', 'link_to_demo' => 'https://www.samsonopt.ru/?ysclid=m3lp21wnla337419618', 'link_to_code' => 'never', 'commercial' => 1],
+            ['name' => 'OM_Soft', 'link_to_demo' => 'https://www.samsonopt.ru/?ysclid=m3lp21wnla337419618', 'link_to_code' => 'never', 'commercial' => 1, 'description' => 'Устраняла ошибки в коде, занималась рефакторингом, сделала 1.5 заказа. Очень многому научилась'],
         );
         $arProjects['EveryDaynik!'] =
             DB::table('projects')->insertGetId(
-                ['name' => 'EveryDaynik!', 'link_to_demo' => 'soon', 'link_to_code' => 'never', 'commercial' => 0]
+            [
+                'name' => 'EveryDaynik!',
+                'link_to_demo' => 'soon',
+                'link_to_code' => 'never',
+                'commercial' => 0,
+                'description' => 'Сайт-ежедневник, котрый я писала для себя, но сделала общедоступным'
+            ]
             );
 
         DB::table('skills')->insert([

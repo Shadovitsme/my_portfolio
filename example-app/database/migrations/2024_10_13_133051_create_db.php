@@ -39,6 +39,7 @@ return new class extends Migration
             $table->boolean('commercial');
             $table->string('link_to_demo')->nullable();
             $table->string('link_to_code')->nullable();
+            $table->longText('description');
             $table->timestamps();
         });
         Schema::create('skills', function (Blueprint $table) {

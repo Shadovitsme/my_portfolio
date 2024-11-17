@@ -21,7 +21,7 @@ foreach (projects::all() as $project) {
             <td>$project->name</td>
             <td> $link </td>
             <td>$code</td>
-            <td></td>
+            <td>$project->description</td>
         </tr> <!--ряд с ячейками тела таблицы-->
 html;
 }
